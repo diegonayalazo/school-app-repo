@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: ventas-api
-  namespace: default
+  namespace: ventas
 spec:
   replicas: 1
   selector:
