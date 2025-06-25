@@ -17,7 +17,7 @@ spec:
       - name: my-dockerhub-secret 
       containers:
       - name: ventas-api
-        image: dienaya/django-docker-app:ee859fd3dfc03257dcf264fe6cfb3aa57d3ce812
+        image: dienaya/django-docker-app:985a58f93f95363ecc6b7d23bebc16e61fb63026
         resources:
           limits:
             memory: "256Mi"
