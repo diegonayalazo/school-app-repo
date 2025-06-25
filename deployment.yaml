@@ -14,7 +14,7 @@ spec:
         app: ventas-api
     spec:
       imagePullSecrets:
-      - name: my-dockerhub-secret
+      - name: my-dockerhub-secret 
       containers:
       - name: ventas-api
         image: dienaya/django-docker-app:1969d2894f67e68122e3760bfa681d12f4ffffd8
