@@ -17,7 +17,7 @@ spec:
       - name: ghcr-secret
       containers:
       - name: ventas-api
-        image: dienaya/django-docker-app:latest
+        image: dienaya/django-docker-app:92565d55fc991bba6e388e8ecf911a35c30618ca
         ports:
         - containerPort: 3000
         resources:
