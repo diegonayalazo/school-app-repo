@@ -1,0 +1,42 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ventas-api
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ventas-api
+  template:
+    metadata:
+      labels:
+        app: ventas-api
+    spec:
+      imagePullSecrets:
+      - name: ghcr-secret
+      containers:
+      - name: ventas-api
+        image: dienaya/django-docker-app:latest
+        ports:
+        - containerPort: 3000
+        resources:
+          limits:
+            memory: "256Mi"
+            cpu: "500m"
+          requests:
+            memory: "128Mi"
+            cpu: "250m"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: ventas-api
+  namespace: default
+spec:
+  selector:
+    app: ventas-api
+  ports:
+  - port: 80
+    targetPort: 3000
+  type: ClusterIP
