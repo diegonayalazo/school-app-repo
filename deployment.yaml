@@ -18,8 +18,6 @@ spec:
       containers:
       - name: ventas-api
         image: dienaya/django-docker-app:1969d2894f67e68122e3760bfa681d12f4ffffd8
-        ports:
-        - containerPort: 3000
         resources:
           limits:
             memory: "256Mi"
